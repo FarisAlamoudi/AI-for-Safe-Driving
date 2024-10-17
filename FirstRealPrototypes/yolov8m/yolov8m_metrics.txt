@@ -1,3 +1,40 @@
+Here are the key performance metrics from the file:
+
+General Metrics:
+Precision: 0.7325
+Recall: 0.4752
+mAP@50 (Mean Average Precision at IoU threshold 0.50): 0.5243
+mAP@50-95: 0.3536
+Fitness: 0.3707
+Class-wise Average Precision (AP) for each class:
+Class 0 (Drinking): 0.2945
+Class 1 (Eating): 0.2307
+Class 2 (Hands off Wheel): 0.8482
+Class 3 (Hands on Wheel): 0.5924
+Class 4 (Phone): 0.5372
+Class 5 (Seatbelt-On): 0.3259
+Classes 6 & 7 (Sleeping, Smoking): No data provided (AP=0)
+Speed:
+Preprocess: 0.0833s
+Inference: 3.4414s
+Loss calculation: 0.00027s
+Postprocess: 0.4940s
+This data indicates the model is doing well for detecting "Hands off Wheel" (AP = 0.8482) and "Hands on Wheel" (AP = 0.5924), but struggling with other classes, especially the "Eating" and "Drinking" categories.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Validation Metrics:
 ultralytics.utils.metrics.DetMetrics object with attributes:
 

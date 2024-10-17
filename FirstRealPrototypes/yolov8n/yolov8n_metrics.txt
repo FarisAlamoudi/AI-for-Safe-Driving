@@ -1,3 +1,13 @@
+Class	mAP (IoU 0.50-0.95)	Recall
+Drinking	0.2249	0.4984 (overall)
+Eating	0.1214	0.4984 (overall)
+Hands off Wheel	0.8359	0.4984 (overall)
+Hands on Wheel	0.5777	0.4984 (overall)
+Phone	0.4631	0.4984 (overall)
+Seatbelt-On	0.2365	0.4984 (overall)
+Sleeping	0.0000	0.4984 (overall)
+Smoking	0.0545	0.4984 (overall)
+
 Validation Metrics:
 ultralytics.utils.metrics.DetMetrics object with attributes:
 
