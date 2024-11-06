@@ -1,0 +1,9 @@
+.venv/
+
+*.exe
+*.out
+secrets_api.py
+*.pt
+__pycache__/
+runs/
+prototyping/Desk-Item-Classifier-1

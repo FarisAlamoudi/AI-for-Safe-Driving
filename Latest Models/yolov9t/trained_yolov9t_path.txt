@@ -1,0 +1,1 @@
+Exported Model Location: /home/jbeni/Desktop/School/COP4934/AI-for-Safe-Driving/prototyping/runs/detect/train75/weights/best.onnx
