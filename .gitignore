@@ -4,6 +4,8 @@
 *.out
 secrets_api.py
 *.pt
+*.onnx
+*.db
 __pycache__/
 runs/
 prototyping/Desk-Item-Classifier-1
