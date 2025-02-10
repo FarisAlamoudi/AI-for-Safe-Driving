@@ -13,7 +13,7 @@ class InsideModel():
         self.cap.set(4, 736)
 
         self.classNames = [
-            'Drinking', 'Eating', 'Hands Off Wheel', 'Hands On Wheel', 'Phone', 'Seatbelt-On', 'Sleeping', 'Smoking'
+            'Drinking', 'Eating', 'Hands Off Wheel', 'Hands On Wheel', 'Phone', 'Sleeping', 'Smoking'
         ]
 
         if db != None:
@@ -84,7 +84,6 @@ class InsideModel():
                 "Hands Off Wheel": 0,
                 "Hands on Wheel": 0,
                 "Phone": 0,
-                "Seatbelt-On": 0,
                 "Sleeping": 0,
                 "Smoking": 0
             }
@@ -100,15 +99,13 @@ class InsideModel():
                     output_dict["Hands on Wheel"] += 1 if (output_dict["Hands Off Wheel"] + output_dict['Hands on Wheel']) < 2 else 0
                 if self.classNames[cls] == "Phone":
                     output_dict['Phone'] = 1
-                if self.classNames[cls] == "Seatbelt-On":
-                    output_dict['Seatbelt-On'] = 1
                 if self.classNames[cls] == "Sleeping":
                     output_dict['Sleeping'] = 1
                 if self.classNames[cls] == "Smoking":
                     output_dict['Smoking'] = 1
 
             if export:
-                self.db.execute(f'INSERT INTO InsideValues (Time, Drinking, Eating, HandsOffWheel, HandsOnWheel, Phone, SeatbeltOn, Sleeping, Smoking) VALUES ("{output_dict['time']}", {output_dict['Drinking']}, {output_dict['Eating']}, {output_dict['Hands Off Wheel']}, {output_dict["Hands on Wheel"]}, {output_dict['Phone']}, {output_dict['Seatbelt-On']}, {output_dict['Sleeping']}, {output_dict['Smoking']})')
-
+                self.db.execute(f'INSERT INTO InsideValues (Time, Drinking, Eating, HandsOffWheel, HandsOnWheel, Phone, Sleeping, Smoking) VALUES ("{output_dict['time']}", {output_dict['Drinking']}, {output_dict['Eating']}, {output_dict['Hands Off Wheel']}, {output_dict["Hands on Wheel"]}, {output_dict['Phone']}, {output_dict['Sleeping']}, {output_dict['Smoking']})')
+                
         self.cap.release()
         cv2.destroyAllWindows()
